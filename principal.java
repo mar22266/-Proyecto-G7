@@ -56,6 +56,14 @@ public class principal {
                         switch(opcion){
                             case 1:{
                         
+                                for (int fila = 0; fila <7; fila++){
+                                    for(int col = 0; col<2; col ++)
+                                    System.out.print(g.getEnsena()[fila][col] + " ");
+                                }
+
+                                System.out.println();
+
+
                                 System.out.println(menuGeo);
                                 System.out.println("Ingrese una opción del menú: ");
                                 opcion = teclado.nextInt();
