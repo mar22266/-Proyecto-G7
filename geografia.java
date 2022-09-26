@@ -3,7 +3,7 @@ public class geografia{
     private String [][] ensena;
 
     public geografia(){
-        ensena = new String[7][1];
+        ensena = new String[7][2]; 
     }
 
 
@@ -35,6 +35,13 @@ public void asignar(){
         this.ensena = ensena;
     }
 
+
+    @Override
+    public String toString() {
+        return "{" +
+            " ensena='" + getEnsena() + "'" +
+            "}";
+    }
  
 
 }
