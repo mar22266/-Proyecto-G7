@@ -46,6 +46,33 @@ public class principal {
 
                 //GEOGRAFIA
                 case 4: {
+                    String menuGeo = "1. Repasar \n2. Evaluar\n";
+                    int opcionGeo = 1;
+                    System.out.println(menuGeo);
+                    System.out.println("Ingrese una opción del menú: ");
+                    opcion = teclado.nextInt();
+                    teclado.nextLine();
+                    while (opcion < 3 && opcion>=1 ){
+                        switch(opcion){
+                            case 1:{
+                        
+                                System.out.println(menuGeo);
+                                System.out.println("Ingrese una opción del menú: ");
+                                opcion = teclado.nextInt();
+                                teclado.nextLine();
+                                break;
+                            }
+
+                            case 2: {
+
+                                System.out.println(menuGeo);
+                                System.out.println("Ingrese una opción del menú: ");
+                                opcion = teclado.nextInt();
+                                teclado.nextLine();
+                                break;
+                            }
+                        }
+
 
                     System.out.println(menu);
                     System.out.println("Ingrese la opción que desea: ");
@@ -53,6 +80,7 @@ public class principal {
                     teclado.nextLine();
                     break;
                 }
+            }
 
 
           
