@@ -52,13 +52,17 @@ public class principal {
                     System.out.println("Ingrese una opción del menú: ");
                     opcion = teclado.nextInt();
                     teclado.nextLine();
+                    g.asignarValores();
+                    String[][] matriz = g.getEnsena();
                     while (opcion < 4 && opcion>=1 ){
                         switch(opcion){
                             case 1:{
                         
                                 for (int fila = 0; fila <8; fila++){
-                                    for(int col = 0; col<3; col ++)
-                                    System.out.print(g.getEnsena());
+                                    for(int col = 0; col<2; col ++){
+                                        System.out.print(matriz[fila][col]);
+                                        
+                                    }
                                 }
 
                                 System.out.println();

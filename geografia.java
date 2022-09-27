@@ -3,7 +3,8 @@ public class geografia{
     private String [][] ensena;
 
     public geografia(){
-        ensena = new String[7][2]; 
+        ensena = new String[8][2]; 
+
     }
 
 
@@ -25,7 +26,7 @@ public void asignarValores(){
     ensena [7][0] = "Guatemala";
     ensena [7][1] = "Guatemala";
 
-    
+
 }
 
 
