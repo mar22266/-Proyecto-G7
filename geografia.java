@@ -1,9 +1,11 @@
 public class geografia{
 
     private String [][] ensena;
+    private String [][] repasa;
 
     public geografia(){
         ensena = new String[8][2]; 
+        repasa = new String[8][2];
 
     }
 
@@ -29,7 +31,35 @@ public void asignarValores(){
 
 }
 
+public void repasar(){
+    repasa [0][0] = "DEPARTAMENTOS";
+    repasa [0][1] = "CABECERAS";
+    repasa [1][0] = "El Progreso";
+    repasa [1][1] = "Guastatoya";
+    repasa [2][0] = "Peten";
+    repasa [2][1] = "Flores";
+    repasa [3][0] = "Alta Verapaz";
+    repasa [3][1] = "Coban";
+    repasa [4][0] = "Escuintla";
+    repasa [4][1] = "Escuintla";
+    repasa [5][0] = "Santa Rosa";
+    repasa [5][1] = "Cuilapa";
+    repasa [6][0] = "Zacapa";
+    repasa [6][1] = "Zacapa";
+    repasa [7][0] = "Guatemala";
+    repasa [7][1] = "Guatemala";
 
+}
+
+
+
+    public String[][] getRepasa() {
+        return this.repasa;
+    }
+
+    public void setRepasa(String[][] repasa) {
+        this.repasa = repasa;
+    }
 
 
     public String[][] getEnsena() {
