@@ -7,7 +7,7 @@ public class geografia{
     }
 
 
-public String[][] asignar(){
+public void asignarValores(){
     ensena [0][0] = "DEPARTAMENTOS";
     ensena [0][1] = "CABECERAS";
     ensena [1][0] = "El Progreso";
@@ -25,8 +25,9 @@ public String[][] asignar(){
     ensena [7][0] = "Guatemala";
     ensena [7][1] = "Guatemala";
 
-    return ensena;
+    
 }
+
 
 
 
@@ -36,7 +37,10 @@ public String[][] asignar(){
 
     public void setEnsena(String[][] ensena) {
         this.ensena = ensena;
+
     }
+
+
 
 
     @Override
