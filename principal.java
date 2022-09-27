@@ -64,10 +64,7 @@ public class principal {
                                         
                                     }
                                 }
-
                                 System.out.println();
-
-
                                 System.out.println(menuGeo);
                                 System.out.println("Ingrese una opción del menú: ");
                                 opcion = teclado.nextInt();
@@ -79,6 +76,16 @@ public class principal {
                                 int punteo = 0;
                                 System.out.println("Cual es la cabecera de El Progreso?\n");
                                 String r1 = teclado.nextLine();
+                                
+                                if(r1.equalsIgnoreCase(matriz[1][1])){
+                                    punteo ++;
+                                }
+                                else{
+                                    System.out.println("RESPUESTA INCORRECTA");
+                                }
+
+                                System.out.println(punteo);
+                                
                                 System.out.println("Cual es la cabecera de Peten?\n");
                                 String r2 = teclado.nextLine();
                                 System.out.println("Cual es la cabecera de Alta Verapaz?\n");
