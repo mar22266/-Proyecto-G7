@@ -14,7 +14,7 @@ public void asignarValores(){
     ensena [0][0] = "\nDEPARTAMENTOS" + " ";
     ensena [0][1] = "\tCABECERAS" + "\n\n";
     ensena [1][0] = "-El Progreso" + " ";
-    ensena [1][1] = "\tGuastatoya"+ "\n";
+    ensena [1][1] = "\t-Guastatoya"+ "\n";
     ensena [2][0] = "-Peten"+ " ";
     ensena [2][1] = "\t\t-Flores"+ "\n";
     ensena [3][0] = "-Alta Verapaz"+ " ";

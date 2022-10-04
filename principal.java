@@ -136,7 +136,7 @@ public class principal {
                                     System.out.println("RESPUESTA INCORRECTA\n");
                                 }
                                 
-                                if(punteo < 60){
+                                if(punteo < 5){
                                     System.out.println("Necesita seguir repasando\n" + "Su promedio es de: "+ punteo*100/7 + "\n");
                                 }
                                 else{
