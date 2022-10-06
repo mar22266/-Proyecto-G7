@@ -49,7 +49,7 @@ public class principal {
                     System.out.println("Respuestas incorrectas: "+(e));
                     System.out.println("\n");
                     
-                     System.out.println(menuMate);
+                    System.out.println(menuMate);
                     System.out.println("Ingrese una opción del menú: ");
                     opcionMate = teclado.nextInt();
                     teclado.nextLine();
