@@ -4,7 +4,7 @@ public class principal {
     
     public static void main(String [] args){
         geografia g = new geografia();
-        
+        mate m = new mate();
         Scanner teclado = new Scanner(System.in);
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n5. Salir";
         int opcion = 1;
@@ -26,9 +26,32 @@ public class principal {
                 //MATE
                 case 2: {
 
-                    System.out.println(menu);
-                    System.out.println("Ingrese la opción que desea: ");
-                    opcion = teclado.nextInt();
+                    m.sumar();
+                    m.restar();
+                    int e = 0;
+                    String res1 = "";
+                    System.out.println("\nResuelva los siguientes ejercicios:");
+                    System.out.println("\n");
+                    for (int i = 0; i <5; i++){
+                        System.out.println("\n"+m.getEjercicios().get(i));
+                        res1 = teclado.nextLine();
+                        String resp = m.getRespuestas().get(i);
+                        if(res1.equals(resp)){
+                            System.out.println("Buen trabajo"); 
+                        }
+                        else{
+                            System.out.println("Respuesta incorrecta");
+                            e++;
+                            m.setErrores(e);
+                        }
+                    }
+                    System.out.println("Respuestas correctas: "+(5-e));
+                    System.out.println("Respuestas incorrectas: "+(e));
+                    System.out.println("\n");
+                    
+                     System.out.println(menuMate);
+                    System.out.println("Ingrese una opción del menú: ");
+                    opcionMate = teclado.nextInt();
                     teclado.nextLine();
                     break;
                 }
