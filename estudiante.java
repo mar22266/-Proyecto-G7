@@ -66,6 +66,9 @@ public class Estudiante {
         "\nCursos:"+cursos+"\nDPI:"+DPI+"\nEdad:"+edad+"\nNombre:"+nombre;
         return cadena;
     }
+    /*
+    *esta parte es para evitar que el mismo estudiante haga 2 usuarios con los mismos datos
+    */
     public boolean equals(Estudiante otraMateria){
         float diffNotas = Math.abs(this.cursos - otraMateria.getCursos());
         if (nombre.equals(otraMateria.getNombre()) && diffNotas < 0.001){
