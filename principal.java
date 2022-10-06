@@ -4,7 +4,7 @@ public class principal {
     
     public static void main(String [] args){
         geografia g = new geografia();
-        
+        mate m = new mate();
         Scanner teclado = new Scanner(System.in);
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n5. Salir";
         int opcion = 1;
