@@ -1,7 +1,7 @@
 /*
  * author: Nelson Eduardo García Bravatti
  * 22434
- * fecha: 28-9-2022.
+ * fecha: 28-9-2022.-
  * clase mate, se encarga de la materia matemática
  */
 
