@@ -18,12 +18,46 @@ public class principal {
                 //lengauje
                 case 1: {
 
-                    System.out.println(menu);
-                    System.out.println("Ingrese la opción que desea: ");
-                    opcion = teclado.nextInt();
+                    String menu_lenguaje = "1. lecciones \n2. Evaluar\n3. Regresar a menu principal";
+                    int opcion_lenguaje = 1;
+                    System.out.println(menu_lenguaje);
+                    System.out.println("Ingrese una opción del menú: ");
+                    opcion_lenguaje = teclado.nextInt();
                     teclado.nextLine();
-                    break;
+                    g.asignarValores();
+                    g.lecciones();
+                    String [][] matrizR = g.getEjercicios();
+                    String[][] matriz = g.getlecciones();
+                    while (opcion_lenguaje < 3 && opcion_lenguaje>=1 ){
+                    witch(opcion_lenguaje){
+                case 1:{
+    
+                    for (int fila = 0; fila <8; fila++){
+                    for(int col = 0; col<2; col ++){
+                    System.out.print(matriz[fila][col]);
+                    
+                    }
                 }
+                System.out.println();
+                System.out.println(menu_lenguaje);
+                System.out.println("Ingrese una opción del menú: ");
+                opcionGeo = teclado.nextInt();
+                teclado.nextLine();
+                break;
+            
+                }
+
+                case 2: {
+                    break:
+                    }
+            
+            
+                System.out.println(menu_lenguaje);
+                System.out.println("Ingrese una opción del menú: ");
+                opcionGeo = teclado.nextInt();
+                teclado.nextLine();
+                break;
+                    }
 
                 //MATE
                 case 2: {
