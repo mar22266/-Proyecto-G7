@@ -4,7 +4,7 @@
  */
 
 
-public class lenguaje{
+public class lengua{
 
     private String [][] lecciones;
     private String [][] ejercicios;
