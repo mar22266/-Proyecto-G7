@@ -5,27 +5,18 @@ public class principal {
     public static void main(String [] args){
         geografia g = new geografia();
         Scanner teclado = new Scanner(System.in);
-        String menu = "1. Agregar Estudiante\n2. Lenguaje\n3. Matemáticas \n4. Geografía  \n5. Salir";
+        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n5. Salir";
         int opcion = 1;
         System.out.println(menu);
         System.out.println("Ingrese una opción del menú: ");
         opcion = teclado.nextInt();
         teclado.nextLine();
-        while (opcion < 5 && opcion>=1 ){
+        while (opcion < 4 && opcion>=1 ){
             switch(opcion){
+            
                 
-                //Agregar estudiante
-                case 1:{
-
-
-                    System.out.println(menu);
-                    System.out.println("Ingrese la opción que desea: ");
-                    opcion = teclado.nextInt();
-                    teclado.nextLine();
-                    break;
-                }
                 //lengauje
-                case 2: {
+                case 1: {
 
                     System.out.println(menu);
                     System.out.println("Ingrese la opción que desea: ");
@@ -35,7 +26,7 @@ public class principal {
                 }
 
                 //MATE
-                case 3: {
+                case 2: {
 
                     System.out.println(menu);
                     System.out.println("Ingrese la opción que desea: ");
@@ -45,7 +36,7 @@ public class principal {
                 }
 
                 //GEOGRAFIA
-                case 4: {
+                case 3: {
                     String menuGeo = "1. Repasar \n2. Evaluar\n3. Regresar a menu principal";
                     int opcionGeo = 1;
                     System.out.println(menuGeo);
@@ -155,7 +146,7 @@ public class principal {
                            
                         }
 
-                
+                    }
                 }
             }
 
@@ -171,8 +162,8 @@ public class principal {
        
         }
 
-
-
     }
+
+
     
-}
+
