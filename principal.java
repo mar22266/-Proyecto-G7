@@ -29,35 +29,35 @@ public class principal {
                     String [][] matrizR = g.getEjercicios();
                     String[][] matriz = g.getlecciones();
                     while (opcion_lenguaje < 3 && opcion_lenguaje>=1 ){
-                    witch(opcion_lenguaje){
-                case 1:{
+                    switch(opcion_lenguaje){
+                        case 1:{
     
-                    for (int fila = 0; fila <8; fila++){
-                    for(int col = 0; col<2; col ++){
-                    System.out.print(matriz[fila][col]);
+                             for (int fila = 0; fila <8; fila++){
+                             for(int col = 0; col<2; col ++){
+                             System.out.print(matriz[fila][col]);
                     
-                    }
-                }
-                System.out.println();
-                System.out.println(menu_lenguaje);
-                System.out.println("Ingrese una opción del menú: ");
-                opcionGeo = teclado.nextInt();
-                teclado.nextLine();
-                break;
+                            }
+                            }
+                            System.out.println();
+                            System.out.println(menu_lenguaje);
+                            System.out.println("Ingrese una opción del menú: ");
+                               opcionGeo = teclado.nextInt();
+                             teclado.nextLine();
+                             break;
             
-                }
-
-                case 2: {
-                    break:
-                    }
+                            }
+    
+                                case 2: {
+                                    break:
+                                    }
             
             
-                System.out.println(menu_lenguaje);
-                System.out.println("Ingrese una opción del menú: ");
-                opcionGeo = teclado.nextInt();
-                teclado.nextLine();
-                break;
-                    }
+                                System.out.println(menu_lenguaje);
+                                System.out.println("Ingrese una opción del menú: ");
+                                opcionlenguaje = teclado.nextInt();
+                                 teclado.nextLine();
+                                 break;
+                             }
 
                 //MATE
                 case 2: {
