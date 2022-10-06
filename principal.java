@@ -18,7 +18,7 @@ public class principal {
                 
                 //lengauje
                 case 1: {
-
+                    
                     
                 }
             
