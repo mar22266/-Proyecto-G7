@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.InputMismatchException; 
@@ -265,7 +266,37 @@ public class principal {
                 }
 
 
+                case 5:{
+                    try {
+                        FileWriter myWriter = new FileWriter("Alumnos.csv");
+                        myWriter.write("Nombre,Edad,Grado Academico,Cursos,Centro Educativo,DPI,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
+                        myWriter.write("hola"+ ","+"adios");
+                        myWriter.close();
+                    
+                    }catch (IOException e) {
+                        System.out.println("Ha ocurrido un error.");
+                        e.printStackTrace();
+                    }
                 
+                    break;
+                }
+
+                case 6:{
+                    try {
+                        File my = new File("Alumnos.csv");
+                        Scanner myReader = new Scanner(my);
+                        while (myReader.hasNextLine()) {
+                          String data = myReader.nextLine();
+                          System.out.println(data);
+                        }
+                        myReader.close();
+                      } catch (FileNotFoundException e) {
+                        System.out.println("Ha ocurrido un error.");
+                        e.printStackTrace();
+                      }
+                    break;
+                    
+                }
             }
         
             System.out.println(menu);
