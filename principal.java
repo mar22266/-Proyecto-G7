@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.InputMismatchException; 
 
 public class principal {
@@ -7,7 +10,7 @@ public class principal {
         geografia g = new geografia();
         mate m = new mate();
         Scanner teclado = new Scanner(System.in);
-        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Salir";
+        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
         int opcion = 1;
         System.out.println(menu);
         System.out.println("Ingrese una opción del menú: ");
@@ -21,7 +24,7 @@ public class principal {
             teclado.nextLine();
         }
         
-        while (opcion < 4 && opcion>=1 ){
+        while (opcion < 7 && opcion>=1 ){
             switch(opcion){
             
                 
@@ -245,6 +248,24 @@ public class principal {
 
                     }
                 }
+
+                case 4:{ 
+                    try {
+                        File myObj = new File("Alumnos.csv");
+                        if (myObj.createNewFile()) {
+                          System.out.println("Archivo creado: " + myObj.getName());
+                        } else {
+                          System.out.println("Archivo ya es existente.");
+                        }
+                    } catch (IOException e) {
+                        System.out.println("Ocurrió un error.");
+                        e.printStackTrace();
+                    }
+                    break;
+                }
+
+
+                
             }
         
             System.out.println(menu);
