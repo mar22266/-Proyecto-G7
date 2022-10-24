@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException; 
 
 public class principal {
     
@@ -6,12 +7,20 @@ public class principal {
         geografia g = new geografia();
         mate m = new mate();
         Scanner teclado = new Scanner(System.in);
-        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n5. Salir";
+        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Salir";
         int opcion = 1;
         System.out.println(menu);
         System.out.println("Ingrese una opción del menú: ");
+        try{
         opcion = teclado.nextInt();
         teclado.nextLine();
+        }
+        catch (InputMismatchException e) {
+            System.out.println("Error Ingrese uno de los numeros anteriores");
+            opcion = teclado.nextInt();
+            teclado.nextLine();
+        }
+        
         while (opcion < 4 && opcion>=1 ){
             switch(opcion){
             
@@ -237,19 +246,16 @@ public class principal {
                     }
                 }
             }
-
+        
             System.out.println(menu);
             System.out.println("Ingrese la opción que desea: ");
             opcion = teclado.nextInt();
             teclado.nextLine();
-          
-          
-           
-           
-            
+
+                
        
         }
-
+        System.out.println("CERRANDO PROGRAMA HASTA LUEGO...");
     }
 
 }

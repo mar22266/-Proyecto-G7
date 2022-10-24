@@ -1,4 +1,4 @@
-public class Estudiante {
+public class estudiante {
     private String nombre;
     private int edad;
     private String añoAcademico;
@@ -6,7 +6,7 @@ public class Estudiante {
     private String centroEducativo;
     private int DPI;
 
-    public Estudiante(){
+    public estudiante(){
         nombre = " ";
         edad = 0;
         añoAcademico = " ";
@@ -15,7 +15,7 @@ public class Estudiante {
         DPI = 0;
 
     }
-    public Estudiante(String nombre, int edad, String añoAcademico, float cursos, String centroEducativo, int DPI){
+    public estudiante(String nombre, int edad, String añoAcademico, float cursos, String centroEducativo, int DPI){
         this.nombre = nombre;
         this.edad = edad;
         this.añoAcademico = añoAcademico;
@@ -69,11 +69,11 @@ public class Estudiante {
     /*
     *esta parte es para evitar que el mismo estudiante haga 2 usuarios con los mismos datos
     */
-    public boolean equals(Estudiante otraMateria){
+    public boolean equals(estudiante otraMateria){
         float diffNotas = Math.abs(this.cursos - otraMateria.getCursos());
         if (nombre.equals(otraMateria.getNombre()) && diffNotas < 0.001){
             return true;
         }
         return false;
     
-}
+}}
