@@ -13,6 +13,7 @@ public class principal {
         Scanner teclado = new Scanner(System.in);
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
         int opcion = 1;
+        int punteo = 0;
         System.out.println(menu);
         System.out.println("Ingrese una opción del menú: ");
         try{
@@ -168,7 +169,6 @@ public class principal {
                             }
 
                             case 2: {
-                                int punteo = 0;
                                 System.out.println("Cual es la cabecera de El Progreso?\n");
                                 String r1 = teclado.nextLine();
 
