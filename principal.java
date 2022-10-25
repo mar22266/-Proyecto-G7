@@ -270,7 +270,7 @@ public class principal {
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
                         myWriter.write("Nombre,Edad,Grado Academico,Cursos,Centro Educativo,DPI,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
-                        myWriter.write("hola"+ ","+"adios");
+                        myWriter.write("hola"+ ","+"adios"+ ","+punteo*100/7);
                         myWriter.close();
                     
                     }catch (IOException e) {
