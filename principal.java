@@ -13,7 +13,7 @@ public class principal {
         int punteo = 0;
         geografia g = new geografia();
         mate m = new mate();
-        System.out.println("BIENVENIDO AL PROGRAMA DE EDUCACION BASICA");
+        System.out.println("\nBIENVENIDO AL PROGRAMA DE EDUCACION BASICA");
         Scanner techword = new Scanner(System.in);
         Scanner teclado = new Scanner(System.in);
         String menuprin = "1. Crear usuario\n2. ingresar a la plataforma\n3. Salir\n";
@@ -21,7 +21,7 @@ public class principal {
         System.out.println(menuprin);
         System.out.println("Ingrese la opción que desea: ");
         opcionprin = techword.nextInt();
-        teclado.nextLine();
+        techword.nextLine();
         while (opcionprin<3 && opcionprin>=1){
             switch (opcionprin){
                 /*nombre = " ";
