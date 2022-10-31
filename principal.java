@@ -8,8 +8,14 @@ import java.util.InputMismatchException;
 public class principal {
     
     public static void main(String [] args){
+        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
+        int opcion = 1;
+        int punteo = 0;
+        geografia g = new geografia();
+        mate m = new mate();
         System.out.println("BIENVENIDO AL PROGRAMA DE EDUCACION BASICA");
         Scanner techword = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         String menuprin = "1. Crear usuario\n2. ingresar a la plataforma\n3. Salir\n";
         int opcionprin = 1;
         System.out.println(menuprin);
@@ -54,12 +60,7 @@ public class principal {
                     break;
                 }
     
-        geografia g = new geografia();
-        mate m = new mate();
-        Scanner teclado = new Scanner(System.in);
-        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
-        int opcion = 1;
-        int punteo = 0;
+            }
         System.out.println(menu);
         System.out.println("Ingrese una opción del menú: ");
         try{
@@ -357,4 +358,4 @@ public class principal {
     }
 
 }
-     } }
+     } 

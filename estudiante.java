@@ -1,11 +1,14 @@
 public class estudiante {
+    
     private String nombre;
     private int edad;
     private String añoAcademico;
     private float cursos;
     private String centroEducativo;
     private int DPI;
-
+    private String correo;
+    private String contraseña;
+/*se agregaron 2 clases extras cuales son correo y contraseña para el ingreso del usuario*/
     public estudiante(){
         nombre = " ";
         edad = 0;
@@ -13,15 +16,19 @@ public class estudiante {
         cursos = 0;
         centroEducativo = " ";
         DPI = 0;
+        correo = "";
+        contraseña = "";
 
     }
-    public estudiante(String nombre, int edad, String añoAcademico, float cursos, String centroEducativo, int DPI){
+    public estudiante(String nombre, int edad, String añoAcademico, float cursos, String centroEducativo, int DPI, String correo, String contraseña){
         this.nombre = nombre;
         this.edad = edad;
         this.añoAcademico = añoAcademico;
         this.cursos = cursos;
         this.centroEducativo = centroEducativo;
         this.DPI = DPI;
+        this.correo = correo;
+        this.contraseña = contraseña;
     }
     public String getAñoAcademico() {
         return añoAcademico;
@@ -59,11 +66,23 @@ public class estudiante {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    public String getCorreo(){
+        return correo;
+    }
+    public void setCorreo(String correo){
+        this.correo = correo;
+    }
+    public String getContraseña(){
+        return contraseña;
+    }
+    public void setContraseña(String contraseña){
+        this.contraseña = contraseña;
+    }
     @Override
     public String toString(){
         String  cadena = "";
         cadena = "Nombre: "+nombre+"\nEdad:"+edad+"\nAñoAcademico:"+añoAcademico+"\nCentroEducativo:"+centroEducativo+
-        "\nCursos:"+cursos+"\nDPI:"+DPI+"\nEdad:"+edad+"\nNombre:"+nombre;
+        "\nCursos:"+cursos+"\nDPI:"+DPI+"\nEdad:"+edad+"\nNombre:"+nombre+"\nCorreo:"+correo+"\nCntraseña:"+contraseña;
         return cadena;
     }
     /*
@@ -76,4 +95,5 @@ public class estudiante {
         }
         return false;
     
-}}
+}
+}
