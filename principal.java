@@ -8,6 +8,52 @@ import java.util.InputMismatchException;
 public class principal {
     
     public static void main(String [] args){
+        System.out.println("BIENVENIDO AL PROGRAMA DE EDUCACION BASICA");
+        Scanner techword = new Scanner(System.in);
+        String menuprin = "1. Crear usuario\n2. ingresar a la plataforma\n3. Salir\n";
+        int opcionprin = 1;
+        System.out.println(menuprin);
+        System.out.println("Ingrese la opción que desea: ");
+        opcionprin = techword.nextInt();
+        teclado.nextLine();
+        while (opcionprin<3 && opcionprin>=1){
+            switch (opcionprin){
+                /*nombre = " ";
+            edad = 0;
+            añoAcademico = " ";
+            cursos = 0;
+            centroEducativo = " ";
+            DPI = 0;
+            correo = "";
+            contraseña = ""; */
+                case 1: {
+                    System.out.println("ingrese su nombre:");
+                    String nombre = techword.nextLine();
+                    System.out.println("Ingrese su edad:");
+                    int edad = techword.nextInt();
+                    techword.nextLine();
+                    System.out.println("Ingrese su año academico:");
+                    String añoAcademico = techword.nextLine();
+                    System.out.println("Ingrese su centro educativo:");
+                    String centroEducativo = techword.nextLine();
+                    System.out.println("Ingrese su DPI:");
+                    int DPI = techword.nextInt();
+                    techword.nextLine();
+                    System.out.print("Ingrese su correo electronico:");
+                    String correo = techword.nextLine();
+                    System.out.println("Ingrese lo que sera su contraseña:");
+                    String contraseña = techword.nextLine();
+                    System.out.println("Ahora puede ingresa al menu de inicio:");
+                    break;
+                }
+                case 2: {
+                    System.out.println("Ingrese su corre electronico");
+                    String correo = techword.nextLine();
+                    System.out.println("Ingrese su contraseña:");
+                    String contraseña = techword.nextLine();
+                    break;
+                }
+    
         geografia g = new geografia();
         mate m = new mate();
         Scanner teclado = new Scanner(System.in);
@@ -311,5 +357,4 @@ public class principal {
     }
 
 }
-    
-
+     } }
