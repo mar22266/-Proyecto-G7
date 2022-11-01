@@ -9,7 +9,7 @@ public class geografia{
 
     }
 
-
+//matriz para mostrar al usuario 
 public void asignarValores(){
     ensena [0][0] = "\nDEPARTAMENTOS" + " ";
     ensena [0][1] = "\tCABECERAS" + "\n\n";
@@ -30,7 +30,7 @@ public void asignarValores(){
 
 
 }
-
+//matriz para repasar
 public void repasar(){
     repasa [0][0] = "DEPARTAMENTOS";
     repasa [0][1] = "CABECERAS";
@@ -53,19 +53,35 @@ public void repasar(){
 
 
 
+    
+    /** setters y getters
+     * @return String[][]
+     */
     public String[][] getRepasa() {
         return this.repasa;
     }
 
+    
+    /** 
+     * @param repasa
+     */
     public void setRepasa(String[][] repasa) {
         this.repasa = repasa;
     }
 
 
+    
+    /** 
+     * @return String[][]
+     */
     public String[][] getEnsena() {
         return this.ensena;
     }
 
+    
+    /** 
+     * @param ensena
+     */
     public void setEnsena(String[][] ensena) {
         this.ensena = ensena;
 
@@ -74,6 +90,10 @@ public void repasar(){
 
 
 
+    
+    /** to string 
+     * @return String
+     */
     @Override
     public String toString() {
 

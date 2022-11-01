@@ -11,67 +11,53 @@ public class principal {
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
         int opcion = 1;
         int punteo = 0;
+        estudiante es = new estudiante();
         geografia g = new geografia();
         mate m = new mate();
-        System.out.println("\nBIENVENIDO AL PROGRAMA DE EDUCACION BASICA");
+        System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA-----------\n");
         Scanner techword = new Scanner(System.in);
         Scanner teclado = new Scanner(System.in);
-        String menuprin = "1. Crear usuario\n2. ingresar a la plataforma\n3. Salir\n";
         int opcionprin = 1;
-        System.out.println(menuprin);
-        System.out.println("Ingrese la opción que desea: ");
-        opcionprin = techword.nextInt();
-        techword.nextLine();
-        while (opcionprin<3 && opcionprin>=1){
-            switch (opcionprin){
-                /*nombre = " ";
-            edad = 0;
-            añoAcademico = " ";
-            cursos = 0;
-            centroEducativo = " ";
-            DPI = 0;
-            correo = "";
-            contraseña = ""; */
-                case 1: {
+        String nombre = "";
+        int edad = 0;
+        int DPI = 0;
+        String centroEducativo = "";
+        String correo = "";
+        String contraseña = "";
+        String añoAcademico = "";
+
                     System.out.println("ingrese su nombre:");
-                    String nombre = techword.nextLine();
+                    nombre = techword.nextLine();
                     System.out.println("Ingrese su edad:");
-                    int edad = techword.nextInt();
+                    edad = techword.nextInt();
                     techword.nextLine();
                     System.out.println("Ingrese su año academico:");
-                    String añoAcademico = techword.nextLine();
+                    añoAcademico = techword.nextLine();
                     System.out.println("Ingrese su centro educativo:");
-                    String centroEducativo = techword.nextLine();
+                    centroEducativo = techword.nextLine();
                     System.out.println("Ingrese su DPI:");
-                    int DPI = techword.nextInt();
+                    DPI = techword.nextInt();
                     techword.nextLine();
                     System.out.print("Ingrese su correo electronico:");
-                    String correo = techword.nextLine();
+                    correo = techword.nextLine();
                     System.out.println("Ingrese lo que sera su contraseña:");
-                    String contraseña = techword.nextLine();
+                    contraseña = techword.nextLine();
                     System.out.println("Ahora puede ingresa al menu de inicio:");
-                    break;
-                }
-                case 2: {
-                    System.out.println("Ingrese su corre electronico");
-                    String correo = techword.nextLine();
-                    System.out.println("Ingrese su contraseña:");
-                    String contraseña = techword.nextLine();
-                    break;
-                }
-    
-            }
-        System.out.println(menu);
-        System.out.println("Ingrese una opción del menú: ");
-        try{
-        opcion = teclado.nextInt();
-        teclado.nextLine();
-        }
-        catch (InputMismatchException e) {
-            System.out.println("Error Ingrese uno de los numeros anteriores");
+
+
+            System.out.println(menu);
+            System.out.println("Ingrese una opción del menú: ");
+            try{
             opcion = teclado.nextInt();
             teclado.nextLine();
-        }
+            }
+            catch (InputMismatchException e) {
+                System.out.println("Error Ingrese uno de los numeros anteriores");
+                opcion = teclado.nextInt();
+                teclado.nextLine();
+            }
+     
+
         
         while (opcion < 7 && opcion>=1 ){
             switch(opcion){
@@ -80,7 +66,7 @@ public class principal {
                 //lengauje
                 case 1: {
                     
-                    
+                    break;
                 }
             
 
@@ -316,8 +302,8 @@ public class principal {
                 case 5:{
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
-                        myWriter.write("Nombre,Edad,Grado Academico,Cursos,Centro Educativo,DPI,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
-                        myWriter.write("hola"+ ","+"adios"+ ","+punteo*100/7);
+                        myWriter.write("Nombre,Edad,Año academico,Centro Educativo,DPI,Correo electronico,contraseña,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
+                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+punteo*100/7);
                         myWriter.close();
                     
                     }catch (IOException e) {
@@ -345,7 +331,7 @@ public class principal {
                     
                 }
             }
-        
+    
             System.out.println(menu);
             System.out.println("Ingrese la opción que desea: ");
             opcion = teclado.nextInt();
@@ -358,4 +344,3 @@ public class principal {
     }
 
 }
-     } 
