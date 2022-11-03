@@ -40,7 +40,7 @@ public class lengua{
     }
     
     public void asignar_Valores2(){
-        lecciones_2 [0][0] = "n\Uso de la C" + " ";
+        lecciones_2 [0][0] = "Uso de la C" + " ";
         lecciones_2 [0][1] = "\tLas terminaciones -cito, -cita, -cillo, -cilla, -cecillo, -cecilla se escriben con c." + "\n\n";
         lecciones_2 [1][0] = "En el caso de las palabras en singular que terminan en z al formar el plural con la terminación es se escriben con c."+ " ";
         lecciones_2 [1][1] ="t-Se escribe con c la terminación -ción, siempre que el sustantivo concreto al que se relacione la palabra termine en -tor y NO en -sor."+ "\n";
@@ -67,12 +67,6 @@ public class lengua{
             return this.ejercicios_2;
         }
 
-        public void setEjerciciosString[][] vid ejercicios() {
-            this.ejercicios = ejercicios;
-        }
-        public void setEjercicios_2String[][] ejercicios_2() {
-            this.ejercicios_2 = ejercicios_2;
-        }
 
         public String[][] getlecciones() {
             return this.lecciones;
