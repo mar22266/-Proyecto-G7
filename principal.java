@@ -75,7 +75,7 @@ public class principal {
                 
                 //lengauje
                 case 1: {
-                    
+                    //clase faltante en proceso
                     break;
                 }
             
@@ -314,7 +314,7 @@ public class principal {
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
                         myWriter.write("Nombre,Edad,Año academico,Centro Educativo,DPI,Correo electronico,contraseña,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
-                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2+","+punteo*100/7);
+                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2+","+0+","+punteo*100/7);
                         myWriter.close();
                     
                     }catch (IOException e) {

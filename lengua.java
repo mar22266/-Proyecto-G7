@@ -1,8 +1,3 @@
-/*
- * Andy Fuentes
- */
-
-
 public class lengua{
 
     private String [][] lecciones;
