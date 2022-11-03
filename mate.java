@@ -22,6 +22,8 @@ public class mate {
 
         Ejercicios = new ArrayList<String>(5);
         Respuestas = new ArrayList<String>(5);
+        Progreso = 0;
+        Errores = 0;
     }
 
         
