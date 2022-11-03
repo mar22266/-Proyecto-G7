@@ -1,3 +1,11 @@
+/* Andre marroquin
+ * Nelson garcia
+ * Jose alejandro anton
+ * Andy fuentes
+ * POO proyecto entrega 3
+ */
+
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
