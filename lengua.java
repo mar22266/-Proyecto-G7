@@ -67,7 +67,7 @@ public class lengua{
             return this.ejercicios_2;
         }
 
-        public void setEjerciciosString[][] ejercicios() {
+        public void setEjerciciosString[][] vid ejercicios() {
             this.ejercicios = ejercicios;
         }
         public void setEjercicios_2String[][] ejercicios_2() {
@@ -97,13 +97,5 @@ public class lengua{
                 "}";
             
         }
-        public String toString() {
-
-            return "{" +
-                " lecciones_2='" + getlecciones_2() + "'" +
-                "}";
-            
-        }
-    
 
 }

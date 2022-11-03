@@ -11,6 +11,8 @@ public class principal {
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
         int opcion = 1;
         int punteo = 0;
+        int punteoMate = 0;
+        int punteoM2 = 0;
         estudiante es = new estudiante();
         geografia g = new geografia();
         mate m = new mate();
@@ -106,7 +108,6 @@ public class principal {
                             case 2:{
                                 m.sumar();
                                 m.restar();
-                                int e = 0;
                                 String res1 = "";
                                 System.out.println("\nResuelva los siguientes ejercicios:");
                                 System.out.println("\n");
@@ -119,12 +120,13 @@ public class principal {
                                     }
                                     else{
                                         System.out.println("Respuesta incorrecta");
-                                        e++;
-                                        m.setErrores(e);
+                                        punteoMate++;
+                                        m.setErrores(punteoMate);
                                     }
                                 }
-                                System.out.println("Respuestas correctas: "+(5-e));
-                                System.out.println("Respuestas incorrectas: "+(e));
+                                System.out.println("Respuestas correctas: "+(5-punteoMate));
+                                System.out.println("Respuestas incorrectas: "+(punteoMate));
+                                System.out.println("Su punteo es de: " + (5-punteoMate)*100/5);
                                 System.out.println("\n");
 
 
@@ -135,7 +137,6 @@ public class principal {
                                 break;
                             }
                             case 3:{
-                                int e = 0;
                                 m.sumar();
                                 m.restar();
                                 String res2 = "";
@@ -150,12 +151,14 @@ public class principal {
                                     }
                                     else{
                                         System.out.println("Respuesta incorrecta");
-                                        e++;
-                                        m.setErrores(e);
+                                        punteoM2++;
+                                        m.setErrores(punteoM2);
                                     }
                                 }
-                                System.out.println("Respuestas correctas: "+(5-e));
-                                System.out.println("Respuestas incorrectas: "+(e));
+                                System.out.println("Respuestas correctas: "+(5-punteoM2));
+                                System.out.println("Respuestas incorrectas: "+(punteoM2));
+                                System.out.println("Su punteo es de: " + (5-punteoM2)*100/5);
+                                System.out.println("Su punteo promedio de sumas y restas es de: "+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2);
                                 System.out.println("\n");
                                 System.out.println(menuMate);
                                 System.out.println("Ingrese una opción del menú: ");
@@ -303,7 +306,7 @@ public class principal {
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
                         myWriter.write("Nombre,Edad,Año academico,Centro Educativo,DPI,Correo electronico,contraseña,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
-                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+punteo*100/7);
+                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2+","+punteo*100/7);
                         myWriter.close();
                     
                     }catch (IOException e) {
