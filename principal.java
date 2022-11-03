@@ -19,10 +19,12 @@ public class principal {
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
         int opcion = 1;
         int punteo = 0;
-        int punteoMate = 0;
-        int punteoM2 = 0;
+        int punteoL = 0;
+        int punteoMate = 5;
+        int punteoM2 = 5;
         estudiante es = new estudiante();
         geografia g = new geografia();
+        lengua l = new lengua();
         mate m = new mate();
         System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA-----------\n");
         Scanner techword = new Scanner(System.in);
@@ -75,10 +77,98 @@ public class principal {
                 
                 //lengauje
                 case 1: {
-                    //clase faltante en proceso
+                    String menuL = "1. Repasar \n2. Evaluar\n3. Regresar a menu principal";
+                    int opcionL = 1;
+                    System.out.println(menuL);
+                    System.out.println("Ingrese una opción del menú: ");
+                    opcionL = teclado.nextInt();
+                    teclado.nextLine();
+                    l.valoresLengua();
+                    l.repasaLengua();
+                    String [][] matrizL = l.getRepasaL();
+                    String[][] matrizEN = l.getEnsenaL();
+                    while (opcionL < 3 && opcionL>=1 ){
+                        switch(opcionL){
+                            case 1:{
+                                for (int fila = 0; fila <6; fila++){
+                                    for(int col = 0; col<2; col ++){
+                                        System.out.print(matrizEN[fila][col]);
+                                        
+                                    }
+                                }
+                                System.out.println();
+                                System.out.println(menuL);
+                                System.out.println("Ingrese una opción del menú: ");
+                                opcionL = teclado.nextInt();
+                                teclado.nextLine();
+
+
+                                break;
+                            }
+
+                            case 2:{
+                                System.out.println("La palabra organizacion se tilda?\n");
+                                String L1 = teclado.nextLine();
+
+                                if(L1.equalsIgnoreCase(matrizL[1][1])){
+                                    punteoL ++;
+                                }
+                                else{
+                                    System.out.println("RESPUESTA INCORRECTA");
+                                }
+
+                                System.out.println("La palabra vagon se tilda?\n");
+                                String L2 = teclado.nextLine();
+                                if(L2.equalsIgnoreCase(matrizL[2][1])){
+                                    punteoL ++;
+                                }
+                                else{
+                                    System.out.println("RESPUESTA INCORRECTA");
+                                }
+                                System.out.println("La palabra sofa se tilda?\n");
+                                String L3 = teclado.nextLine();
+                                if(L3.equalsIgnoreCase(matrizL[3][1])){
+                                    punteoL ++;
+                                }
+                                else{
+                                    System.out.println("RESPUESTA INCORRECTA");
+                                }
+                                System.out.println("La palabra escuitla se tilda?\n");
+                                String L4 = teclado.nextLine();
+                                if(L4.equalsIgnoreCase(matrizL[4][1])){
+                                    punteoL ++;
+                                }
+                                else{
+                                    System.out.println("RESPUESTA INCORRECTA");
+                                }
+                                System.out.println("La palabra jugaras se tilda?\n");
+                                String L5 = teclado.nextLine();
+                                if(L5.equalsIgnoreCase(matrizL[5][1])){
+                                    punteoL ++;
+                                }
+                                else{
+                                    System.out.println("RESPUESTA INCORRECTA");
+                                }
+
+                                System.out.println("Su punteo es de: "+ punteoL*100/5);
+
+
+
+                                System.out.println(menuL);
+                                System.out.println("Ingrese una opción del menú: ");
+                                opcionL = teclado.nextInt();
+                                teclado.nextLine();
+                                break;
+                            }
+
+
+                        }
+                    }
+                    
                     break;
                 }
-            
+
+                
 
                 //MATE
                 case 2: {
@@ -125,16 +215,17 @@ public class principal {
                                     String resp = m.getRespuestas().get(i);
                                     if(res1.equals(resp)){
                                         System.out.println("Buen trabajo"); 
+                                        punteoMate++;
                                     }
                                     else{
                                         System.out.println("Respuesta incorrecta");
-                                        punteoMate++;
                                         m.setErrores(punteoMate);
                                     }
                                 }
-                                System.out.println("Respuestas correctas: "+(5-punteoMate));
-                                System.out.println("Respuestas incorrectas: "+(punteoMate));
-                                System.out.println("Su punteo es de: " + (5-punteoMate)*100/5);
+                                System.out.println("Respuestas correctas: "+(punteoMate-5));
+                                System.out.println("Respuestas incorrectas: "+(10-punteoMate));
+                                System.out.println("Su punteo es de: " + (punteoMate-5)*100/5);
+                                System.out.println("Su punteo promedio de sumas y restas es de: "+(((punteoM2-5)*100/5)+(punteoMate-5)*100/5)/2);
                                 System.out.println("\n");
 
 
@@ -156,17 +247,17 @@ public class principal {
                                     res2 = teclado.nextLine();
                                     if(res2.equals(resp2)){
                                         System.out.println("Buen trabajo");
+                                        punteoM2++;
                                     }
                                     else{
                                         System.out.println("Respuesta incorrecta");
-                                        punteoM2++;
                                         m.setErrores(punteoM2);
                                     }
                                 }
-                                System.out.println("Respuestas correctas: "+(5-punteoM2));
-                                System.out.println("Respuestas incorrectas: "+(punteoM2));
-                                System.out.println("Su punteo es de: " + (5-punteoM2)*100/5);
-                                System.out.println("Su punteo promedio de sumas y restas es de: "+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2);
+                                System.out.println("Respuestas correctas: "+(punteoM2-5));
+                                System.out.println("Respuestas incorrectas: "+(10-punteoM2));
+                                System.out.println("Su punteo es de: " + (punteoM2-5)*100/5);
+                                System.out.println("Su punteo promedio de sumas y restas es de: "+(((punteoM2-5)*100/5)+(punteoMate-5)*100/5)/2);
                                 System.out.println("\n");
                                 System.out.println(menuMate);
                                 System.out.println("Ingrese una opción del menú: ");
@@ -314,7 +405,7 @@ public class principal {
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
                         myWriter.write("Nombre,Edad,Año academico,Centro Educativo,DPI,Correo electronico,contraseña,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
-                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2+","+0+","+punteo*100/7);
+                        myWriter.write(nombre+ ","+edad+ ","+añoAcademico+","+ centroEducativo+ "," +DPI+","+correo+","+contraseña+","+(((5-punteoM2)*100/5)+(5-punteoMate)*100/5)/2+","+punteoL*100/5+","+punteo*100/7);
                         myWriter.close();
                     
                     }catch (IOException e) {
