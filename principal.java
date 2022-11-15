@@ -15,16 +15,9 @@ import java.util.InputMismatchException; /*s lanzada por la clase Scanner cuando
 /*creamos la clase principal*/
 public class principal { 
     
-<<<<<<< HEAD
-    public static void main(String [] args){
-        // Menu principal
-        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía \n4. Guardar Progreso \n5. Mostrar Datos  \n6. Salir";
-        int opcion = 1;
-=======
     public static void main(String [] args){ /* creamos el metodo para el menu*/
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía \n4. Guardar Progreso \n5. Mostrar Datos  \n6. Salir";/* creamos el menu con los casos*/
         int opcion = 1; /* inicializamos algunos punteos, a mate y M2 para que el promedio no de negativo*/
->>>>>>> 5ccaa613d18583ef203360fc2bdf3e1dd49ca1e9
         int punteo = 0;
         int punteoL = 0;
         int punteoMate = 5;
