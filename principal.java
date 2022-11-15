@@ -26,7 +26,7 @@ public class principal {
         geografia g = new geografia();
         lengua l = new lengua();
         mate m = new mate();
-        System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA-----------\n");
+        System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA------------\n");
         Scanner techword = new Scanner(System.in);
         Scanner teclado = new Scanner(System.in);
         int opcionprin = 1;
