@@ -6,12 +6,12 @@
  */
 
 
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.InputMismatchException; 
+import java.util.Scanner;/*Importamos el Scanner para poder pedirle ingresar datos al usuario*/
+import java.io.File; /*Importamos el .io para los documentos*/
+import java.io.FileNotFoundException;/* Importamos el found exception para los documentos*/
+import java.io.FileWriter;/*Importamos el .io.filewriter esta se utiliza para escribir archivos en forma de caracteres del mismo*/
+import java.io.IOException;/* Se importa el .io.exception clase base para excepciones que se producen mientras se tiene acceso a la información mediante secuencias, archivos y directorios*/
+import java.util.InputMismatchException; /*s lanzada por la clase Scanner cuando el elemento recibido no corresponde al tipo de dato esperado*/
 
 public class principal {
     
