@@ -29,7 +29,6 @@ public class principal {
         System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA-----------\n");
         Scanner techword = new Scanner(System.in);
         Scanner teclado = new Scanner(System.in);
-        int opcionprin = 1;
         String nombre = "";
         int edad = 0;
         int DPI = 0;
