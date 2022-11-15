@@ -12,12 +12,12 @@ import java.io.FileNotFoundException;/* Importamos el found exception para los d
 import java.io.FileWriter;/*Importamos el .io.filewriter esta se utiliza para escribir archivos en forma de caracteres del mismo*/
 import java.io.IOException;/* Se importa el .io.exception clase base para excepciones que se producen mientras se tiene acceso a la información mediante secuencias, archivos y directorios*/
 import java.util.InputMismatchException; /*s lanzada por la clase Scanner cuando el elemento recibido no corresponde al tipo de dato esperado*/
-
-public class principal {
+/*creamos la clase principal*/
+public class principal { 
     
-    public static void main(String [] args){
-        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía \n4. Guardar Progreso \n5. Mostrar Datos  \n6. Salir";
-        int opcion = 1;
+    public static void main(String [] args){ /* creamos el metodo para el menu*/
+        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía \n4. Guardar Progreso \n5. Mostrar Datos  \n6. Salir";/* creamos el menu con los casos*/
+        int opcion = 1; /* inicializamos algunos punteos, a mate y M2 para que el promedio no de negativo*/
         int punteo = 0;
         int punteoL = 0;
         int punteoMate = 5;
