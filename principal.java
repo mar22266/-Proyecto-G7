@@ -90,12 +90,25 @@ public class principal {
                     while (opcionL < 3 && opcionL>=1 ){
                         switch(opcionL){
                             case 1:{
+                                System.out.println("\n");
+                                System.out.println("\n La tilde o acento ortográfico es la marca escrita que se coloca sobre una letra"); 
+                                System.out.println("\npara indicar que esa sílaba se pronuncia con mayor intensidad."); 
+                                System.out.println("\nLas mayúsculas también se escriben con tilde."); 
+                                System.out.println("\nHay que tener en cuenta que el sentido de una palabra puede ser modificado según la sílaba que se acentúe."); 
+                                System.out.println("\nAsimismo, la colocación correcta de la tilde permite distinguir funciones y significados en casos de duda o ambigüedad.");
+                                System.out.println("\nPalabras agudas, se acentúan en la última sílaba, llevan tilde cuando terminan en n, s o vocal.");
+                                System.out.println("\nPalabras graves, se acentúan en la penúltima sílaba, llevan tilde cuando no terminan en n, s o vocal.");
+                                System.out.println("\nPalabras esdrújulas, se acentúan en la antepenúltima sílaba, llevan tilde siempre.");
+                                System.out.println("\nPalabras sobreesdrújulas, se acentúan en la sílaba anterior a la antepenúltima, llevan tilde siempre.");
+                                System.out.println("\n");
+                                System.out.println("\nEjemplos:\n");
                                 for (int fila = 0; fila <6; fila++){
                                     for(int col = 0; col<2; col ++){
                                         System.out.print(matrizEN[fila][col]);
                                         
                                     }
                                 }
+                                System.out.println("\n");
                                 System.out.println();
                                 System.out.println(menuL);
                                 System.out.println("Ingrese una opción del menú: ");
