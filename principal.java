@@ -16,7 +16,7 @@ import java.util.InputMismatchException; /*s lanzada por la clase Scanner cuando
 public class principal {
     
     public static void main(String [] args){
-        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía  \n4. Crear CSV \n5. Almacenar en CSV \n6. Leer CSV  \n7. Salir";
+        String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía \n4. Guardar Progreso \n5. Mostrar Datos  \n6. Salir";
         int opcion = 1;
         int punteo = 0;
         int punteoL = 0;
@@ -69,8 +69,20 @@ public class principal {
             }
      
 
+            try {
+                File myObj = new File("Alumnos.csv");
+                if (myObj.createNewFile()) {
+                  System.out.println("Archivo creado: " + myObj.getName());
+                } else {
+                  System.out.println("Archivo ya es existente.");
+                }
+            } catch (IOException e) {
+                System.out.println("Ocurrió un error.");
+                e.printStackTrace();
+            }
+
         
-        while (opcion < 7 && opcion>=1 ){
+        while (opcion < 6 && opcion>=1 ){
             switch(opcion){
             
                 
@@ -397,23 +409,8 @@ public class principal {
                     }
                 }
 
-                case 4:{ 
-                    try {
-                        File myObj = new File("Alumnos.csv");
-                        if (myObj.createNewFile()) {
-                          System.out.println("Archivo creado: " + myObj.getName());
-                        } else {
-                          System.out.println("Archivo ya es existente.");
-                        }
-                    } catch (IOException e) {
-                        System.out.println("Ocurrió un error.");
-                        e.printStackTrace();
-                    }
-                    break;
-                }
 
-
-                case 5:{
+                case 4:{
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
                         myWriter.write("Nombre,Edad,Año academico,Centro Educativo,DPI,Correo electronico,contraseña,Promedio Mate,Promedio Lenguaje,Promedio Geografia\n");
@@ -428,7 +425,7 @@ public class principal {
                     break;
                 }
 
-                case 6:{
+                case 5:{
                     try {
                         File my = new File("Alumnos.csv");
                         Scanner myReader = new Scanner(my);
