@@ -6,12 +6,12 @@
  */
 
 
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.InputMismatchException; 
+import java.util.Scanner;/*Importamos el Scanner para poder pedirle ingresar datos al usuario*/
+import java.io.File; /*Importamos el .io para los documentos*/
+import java.io.FileNotFoundException;/* Importamos el found exception para los documentos*/
+import java.io.FileWriter;/*Importamos el .io.filewriter esta se utiliza para escribir archivos en forma de caracteres del mismo*/
+import java.io.IOException;/* Se importa el .io.exception clase base para excepciones que se producen mientras se tiene acceso a la información mediante secuencias, archivos y directorios*/
+import java.util.InputMismatchException; /*s lanzada por la clase Scanner cuando el elemento recibido no corresponde al tipo de dato esperado*/
 
 public class principal {
     
@@ -26,7 +26,7 @@ public class principal {
         geografia g = new geografia();
         lengua l = new lengua();
         mate m = new mate();
-        System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA-----------\n");
+        System.out.println("\n----------BIENVENIDO AL PROGRAMA DE EDUCACION BASICA------------\n");
         Scanner techword = new Scanner(System.in);
         Scanner teclado = new Scanner(System.in);
         String nombre = "";
@@ -89,12 +89,25 @@ public class principal {
                     while (opcionL < 3 && opcionL>=1 ){
                         switch(opcionL){
                             case 1:{
+                                System.out.println("\n");
+                                System.out.println("\n La tilde o acento ortográfico es la marca escrita que se coloca sobre una letra"); 
+                                System.out.println("\npara indicar que esa sílaba se pronuncia con mayor intensidad."); 
+                                System.out.println("\nLas mayúsculas también se escriben con tilde."); 
+                                System.out.println("\nHay que tener en cuenta que el sentido de una palabra puede ser modificado según la sílaba que se acentúe."); 
+                                System.out.println("\nAsimismo, la colocación correcta de la tilde permite distinguir funciones y significados en casos de duda o ambigüedad.");
+                                System.out.println("\nPalabras agudas, se acentúan en la última sílaba, llevan tilde cuando terminan en n, s o vocal.");
+                                System.out.println("\nPalabras graves, se acentúan en la penúltima sílaba, llevan tilde cuando no terminan en n, s o vocal.");
+                                System.out.println("\nPalabras esdrújulas, se acentúan en la antepenúltima sílaba, llevan tilde siempre.");
+                                System.out.println("\nPalabras sobreesdrújulas, se acentúan en la sílaba anterior a la antepenúltima, llevan tilde siempre.");
+                                System.out.println("\n");
+                                System.out.println("\nEjemplos:\n");
                                 for (int fila = 0; fila <6; fila++){
                                     for(int col = 0; col<2; col ++){
                                         System.out.print(matrizEN[fila][col]);
                                         
                                     }
                                 }
+                                System.out.println("\n");
                                 System.out.println();
                                 System.out.println(menuL);
                                 System.out.println("Ingrese una opción del menú: ");
