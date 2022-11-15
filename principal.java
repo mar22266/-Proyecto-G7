@@ -16,6 +16,7 @@ import java.util.InputMismatchException; /*s lanzada por la clase Scanner cuando
 public class principal {
     
     public static void main(String [] args){
+        // Menu principal
         String menu = "\n1. Lenguaje\n2. Matemáticas \n3. Geografía \n4. Guardar Progreso \n5. Mostrar Datos  \n6. Salir";
         int opcion = 1;
         int punteo = 0;
@@ -37,6 +38,9 @@ public class principal {
         String contraseña = "";
         String añoAcademico = "";
 
+        /*
+         * Se piden datos iniciales a usuarios
+         */
         System.out.println("ingrese su nombre:");
         nombre = techword.nextLine();
         System.out.println("Ingrese su edad:");
@@ -58,6 +62,11 @@ public class principal {
 
             System.out.println(menu);
             System.out.println("Ingrese una opción del menú: ");
+
+            /*
+             * 
+             * se manejan los errores en caso de ingresar alguna letra en vez de numero
+             */
             try{
             opcion = teclado.nextInt();
             teclado.nextLine();
@@ -68,7 +77,9 @@ public class principal {
                 teclado.nextLine();
             }
      
-
+            /*
+             * Se crean el archivo csv con manejo de errores
+             */
             try {
                 File myObj = new File("Alumnos.csv");
                 if (myObj.createNewFile()) {
@@ -81,12 +92,12 @@ public class principal {
                 e.printStackTrace();
             }
 
-        
+        // ciclo while del menu para las opciones
         while (opcion < 6 && opcion>=1 ){
             switch(opcion){
             
                 
-                //lengauje
+                // clase lengauje
                 case 1: {
                     String menuL = "1. Repasar \n2. Evaluar\n3. Regresar a menu principal";
                     int opcionL = 1;
@@ -100,6 +111,7 @@ public class principal {
                     String[][] matrizEN = l.getEnsenaL();
                     while (opcionL < 3 && opcionL>=1 ){
                         switch(opcionL){
+                            //area de repaso de lemguaje
                             case 1:{
                                 System.out.println("\n");
                                 System.out.println("\n La tilde o acento ortográfico es la marca escrita que se coloca sobre una letra"); 
@@ -129,8 +141,9 @@ public class principal {
 
                                 break;
                             }
-
+                            //area de evaluacion de lenjuage
                             case 2:{
+                                System.out.println("SE LE HARAN 5 PREGUNTAS SOBRE SI SE TILDAN O NO LAS PALABRA\n");
                                 System.out.println("La palabra organizacion se tilda?\n");
                                 String L1 = teclado.nextLine();
 
@@ -194,7 +207,7 @@ public class principal {
 
                 
 
-                //MATE
+                //clase MATE
                 case 2: {
                     String menuMate = "1. Repasar \n2. Sumas \n3. Restas \n4. Regresar a menu principal";
                     int opcionMate = 1;
@@ -205,7 +218,7 @@ public class principal {
                     
                     while (opcionMate < 4 && opcionMate>=1 ){
                         switch(opcionMate){
-
+                            //area de repaso de matematica
                             case 1:{
                                 System.out.println("\n");
                                 System.out.println("\nLas sumas y restas son las primeras operaciones matemáticas que aprendemos. ");
@@ -227,7 +240,9 @@ public class principal {
 
                                 break;
                             }
+                            //area de evaluaicon de de matematica
                             case 2:{
+                                System.out.println("SE LE HARAN 5 PREGUNTAS DE SUMAS\n");
                                 m.sumar();
                                 m.restar();
                                 String res1 = "";
@@ -246,6 +261,8 @@ public class principal {
                                         m.setErrores(punteoMate);
                                     }
                                 }
+
+                                //promedio de sumas y del modulo en matematica
                                 System.out.println("Respuestas correctas: "+(punteoMate-5));
                                 System.out.println("Respuestas incorrectas: "+(10-punteoMate));
                                 System.out.println("Su punteo es de: " + (punteoMate-5)*100/5);
@@ -259,7 +276,10 @@ public class principal {
                                 teclado.nextLine();
                                 break;
                             }
+
+                            //area de evaluacion de matematica
                             case 3:{
+                                System.out.println("SE LE HARAN 5 PREGUNTAS SOBRE RESTAS\n");
                                 m.sumar();
                                 m.restar();
                                 String res2 = "";
@@ -296,7 +316,7 @@ public class principal {
                     break;
                 }
 
-                //GEOGRAFIA
+                //clase GEOGRAFIA
                 case 3: {
                     String menuGeo = "1. Repasar \n2. Evaluar\n3. Regresar a menu principal";
                     int opcionGeo = 1;
@@ -310,6 +330,7 @@ public class principal {
                     String[][] matriz = g.getEnsena();
                     while (opcionGeo < 3 && opcionGeo>=1 ){
                         switch(opcionGeo){
+                            //area de repaso de geografia
                             case 1:{
                         
                                 for (int fila = 0; fila <8; fila++){
@@ -328,6 +349,8 @@ public class principal {
                             }
 
                             case 2: {
+                                System.out.println("SE LE HARAN 7 PREGUNTAS SOBRE CABECERAS DE LOS DEPARTAMENTOS DE GUATEMALA\n");
+                                // area de evaluacion de geografia
                                 System.out.println("Cual es la cabecera de El Progreso?\n");
                                 String r1 = teclado.nextLine();
 
@@ -409,7 +432,9 @@ public class principal {
                     }
                 }
 
-
+                /*
+                 * Se gurdan los datos en el archivo csv
+                 */
                 case 4:{
                     try {
                         FileWriter myWriter = new FileWriter("Alumnos.csv");
@@ -424,6 +449,10 @@ public class principal {
                 
                     break;
                 }
+
+                /*
+                 * Se leen los datos que estan el archivo csv
+                 */
 
                 case 5:{
                     try {
@@ -449,7 +478,7 @@ public class principal {
             teclado.nextLine();
 
                 
-       
+       //cierre del prgrama
         }
         System.out.println("CERRANDO PROGRAMA HASTA LUEGO...");
     }
