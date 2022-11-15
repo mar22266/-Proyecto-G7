@@ -37,23 +37,23 @@ public class principal {
         String contraseña = "";
         String añoAcademico = "";
 
-                    System.out.println("ingrese su nombre:");
-                    nombre = techword.nextLine();
-                    System.out.println("Ingrese su edad:");
-                    edad = techword.nextInt();
-                    techword.nextLine();
-                    System.out.println("Ingrese su año academico:");
-                    añoAcademico = techword.nextLine();
-                    System.out.println("Ingrese su centro educativo:");
-                    centroEducativo = techword.nextLine();
-                    System.out.println("Ingrese su DPI:");
-                    DPI = techword.nextInt();
-                    techword.nextLine();
-                    System.out.print("Ingrese su correo electronico:");
-                    correo = techword.nextLine();
-                    System.out.println("Ingrese lo que sera su contraseña:");
-                    contraseña = techword.nextLine();
-                    System.out.println("Ahora puede ingresa al menu de inicio:");
+        System.out.println("ingrese su nombre:");
+        nombre = techword.nextLine();
+        System.out.println("Ingrese su edad:");
+        edad = techword.nextInt();
+        techword.nextLine();
+        System.out.println("Ingrese su año academico:");
+        añoAcademico = techword.nextLine();
+        System.out.println("Ingrese su centro educativo:");
+        centroEducativo = techword.nextLine();
+        System.out.println("Ingrese su DPI:");
+        DPI = techword.nextInt();
+        techword.nextLine();
+        System.out.print("Ingrese su correo electronico:");
+        correo = techword.nextLine();
+        System.out.println("Ingrese lo que sera su contraseña:");
+        contraseña = techword.nextLine();
+        System.out.println("Ahora puede ingresa al menu de inicio:");
 
 
             System.out.println(menu);
